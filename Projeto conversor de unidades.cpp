@@ -73,5 +73,5 @@ printf("\nEscolha a Conversão:\n");
             resultado = num*1000;
         }
     }
-printf("\nRESULTADO = %0.2f", resultado);
+printf("\nRESULTADO = %0.3f", resultado);
 }
