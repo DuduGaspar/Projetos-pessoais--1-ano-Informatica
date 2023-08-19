@@ -57,7 +57,7 @@ printf("\nEscolha a Conversão:\n");
         }
     }
     if(strcmp(resp1,"M")==0){
-        printf("1 = Miligrama para Grama\n2 = Grama para Miligrama\n3 = Grama para Kilograma\n4 = Kilograma para Grama\n\n");
+        printf("1 = Miligrama para Grama\n2 = Grama para Miligrama\n3 = Grama para Kilograma\n4 = Kilograma para Grama\n\n"); y=1;
         while(y<=2){
         scanf("%d", &resp2);
         if(resp2 != 1 && resp2 != 2 && resp2 != 3 && resp2 != 4){
