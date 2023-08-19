@@ -2,19 +2,34 @@
 #include <string.h>
 #include<locale.h>
 char resp1[1];
-int resp2;
+int resp2, x, y;
 float num, resultado;
 int main(){
 setlocale(LC_ALL, "portuguese");
 printf(" !CONVERSOR DE UNIDADES!\n\n");
+x=1;
 printf("Escolha o tipo de unidades:\nC = Comprimento\nV = Capacidade\nM = Massa\n\n");
-gets(resp1);
-printf("\nDigite o número:\n\n");
+	while(x<=2){
+		gets(resp1);
+		if(strcmp(resp1,"C")!=0 && strcmp(resp1,"V")!=0 && strcmp(resp1,"M")!=0){
+			printf("\nLetra digitada incorretamente! Tente digitar em letra maiÃºscula!\n\n");
+		}else {
+			x=3;
+		}
+	}
+printf("\nDigite o nÃºmero:\n\n");
 scanf("%f", &num);
-printf("\nEscolha a Conversão:\n");
+printf("\nEscolha a ConversÃ£o:\n");
     if(strcmp(resp1,"C")==0){
-        printf("1 = Centímetro para Metro\n2 = Metro para Centímetro\n3 = Metro para Quilômetro\n4 = Quilômetro para Metro\n\n");
-        scanf("%d", &resp2);
+        printf("1 = CentÃ­metro para Metro\n2 = Metro para CentÃ­metro\n3 = Metro para QuilÃ´metro\n4 = QuilÃ´metro para Metro\n\n");
+        while(y<=2){
+        	scanf("%d", &resp2);
+        	if(resp2 != 1 && resp2 != 2 && resp2 != 3 && resp2 != 4){
+        		printf("\nDigito incorreto! Digite um nÃºmero de 1 a 4\n\n");
+			}else{
+				y=3;
+			}
+    	}
         if(resp2 == 1){
             resultado = num/100;
         }else if(resp2 == 2){
@@ -26,8 +41,15 @@ printf("\nEscolha a Conversão:\n");
         }
     }
     if(strcmp(resp1,"V")==0){
-        printf("1 = Mililitro para Litro\n2 = Litro para Mililitro\n\n");
+        printf("1 = Mililitro para Litro\n2 = Litro para Mililitro\n\n"); y=1;
+        while(y<=2){
         scanf("%d", &resp2);
+        	if(resp2 != 1 && resp2 != 2){
+        		printf("\nDigito incorreto! Digite um nÃºmero de 1 a 2\n\n");
+			}else{
+				y=3;
+			}
+    	}
         if(resp2 == 1){
             resultado = num/1000;
         }else if(resp2 == 2){
@@ -36,7 +58,14 @@ printf("\nEscolha a Conversão:\n");
     }
     if(strcmp(resp1,"M")==0){
         printf("1 = Miligrama para Grama\n2 = Grama para Miligrama\n3 = Grama para Kilograma\n4 = Kilograma para Grama\n\n");
+        while(y<=2){
         scanf("%d", &resp2);
+        if(resp2 != 1 && resp2 != 2 && resp2 != 3 && resp2 != 4){
+        		printf("\nDigito incorreto! Digite um nÃºmero de 1 a 4\n\n");
+			}else{
+				y=3;
+			}
+    	}
         if(resp2 == 1 || resp2 == 3){
             resultado = num/1000;
         }
@@ -46,5 +75,3 @@ printf("\nEscolha a Conversão:\n");
     }
 printf("\nRESULTADO = %0.2f", resultado);
 }
-    
-
