@@ -75,11 +75,11 @@ y=0; x=0; z=0;
         }
     }
 	printf("\nRESULTADO = %0.3f\n\n", resultado);
-	printf("Deseja converter outro número?\n 1 = Sim ou 2 = Não\n");
+	printf("Deseja converter outro número?\n\n 1 = Sim ou 2 = Não\n\n");
 	while(x<5){
 		scanf("%d",&resp);
 		if(resp != 1 && resp != 2){
-			printf("!Digite 1 ou 2!\n");
+			printf("\n!Digite 1 ou 2!\n\n");
 		}else{
 			x=5;
 		}
