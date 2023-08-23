@@ -5,6 +5,7 @@ float preco, total;
 char resp[1];
 int x, y;
 main(){
+setlocale(LC_ALL, "portuguese");
 printf("!CAIXA REGISTRADORA!\n\n");
 while(x<1){
 	printf("Deseja adicionar um produto?\nDigite: S = Sim ou N = Não\n");
