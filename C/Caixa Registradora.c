@@ -1,12 +1,13 @@
 #include<stdio.h>
 #include<string.h>
+#include<locale.h>
 float preco, total;
 char resp[1];
 int x, y;
 main(){
 printf("!CAIXA REGISTRADORA!\n\n");
 while(x<1){
-	printf("Deseja adicionar um produto?\nDigite: S = Sim ou N = Não\n");
+	printf("Deseja adicionar um produto?\nDigite: S = Sim ou N = NÃ£o\n");
 	while(y<1){
 		gets(resp);
 		if(strcmp(resp,"N")!=0 && strcmp(resp,"S")!=0){
@@ -19,7 +20,7 @@ while(x<1){
 		x=1;
 	}
 	if(strcmp(resp,"S")==0){
-	printf("Digite o preço do produto:\n");
+	printf("Digite o preÃ§o do produto:\n");
 	scanf("%f",&preco);
 	total=total+preco;
 	}
